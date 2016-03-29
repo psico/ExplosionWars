@@ -57,7 +57,7 @@ public class PlayerInputs : MonoBehaviour {
     void defineSizeExplosion(GameObject explosion, Vector3 position)
     {
         //@TODO arrumar problema do retorno que pode ser false
-        GameObject positionBlockX = returnBlockLinha(position);
+        GameObject positionBlockX = blocoMaisProximoNaLinhaSegundoPosicao(position);
         Vector3 positionBlockZ = returnBlockColumn(position);
 
         GameObject explosionRight;
@@ -78,7 +78,7 @@ public class PlayerInputs : MonoBehaviour {
         */
     }
 
-    GameObject returnBlockLinha(Vector3 position)
+    GameObject blocoMaisProximoNaLinhaSegundoPosicao(Vector3 position)
     {
         
         GameObject feedback = new GameObject();
@@ -232,4 +232,9 @@ public class PlayerInputs : MonoBehaviour {
 
         return feedback;
     }
+
+    /*Vector3 positionByCoordinates()
+    {
+
+    }*/
 }
